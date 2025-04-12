@@ -1,20 +1,22 @@
 {
     "name": "holacliente/laravel-ubigeo",
     "type": "library",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TuNamespace\\MiPlugin\\": "src/"
+            "Holacliente\\LaravelUbigeo\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "TuNamespace\\MiPlugin\\Providers\\MiPluginServiceProvider"
+                "Holacliente\\LaravelUbigeo\\Providers\\MiPluginServiceProvider"
             ]
         }
     },
     "require": {
         "php": "^7.0",
         "laravel/framework": "^7.0"
-    }
+    },
+    "minimum-stability": "dev"
 }
