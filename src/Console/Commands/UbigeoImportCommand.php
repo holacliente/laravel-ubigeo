@@ -1,11 +1,9 @@
-use Illuminate\Console\Command;
-
 <?php
 
-namespace TuNamespace\MiPlugin\Console\Commands;
+namespace Holacliente\LaravelUbigeo\Console\Commands;
 
 use Illuminate\Console\Command;
-use TuNamespace\MiPlugin\Models\Ubigeo; // Si tienes un modelo
+use Holacliente\LaravelUbigeo\Models\Ubigeo; // Si tienes un modelo
 
 
 class UbigeoImportCommand extends Command
