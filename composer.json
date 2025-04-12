@@ -1,7 +1,7 @@
 {
     "name": "holacliente/laravel-ubigeo",
     "type": "library",
-    "version": "v3.0.0-beta",
+    "version": "v4.0.0-beta",
     "license": "MIT",
     "autoload": {
         "psr-4": {
