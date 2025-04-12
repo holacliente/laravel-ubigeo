@@ -1,0 +1,20 @@
+{
+    "name": "holacliente/laravel-ubigeo",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "TuNamespace\\MiPlugin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TuNamespace\\MiPlugin\\Providers\\MiPluginServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "^7.0"
+    }
+}

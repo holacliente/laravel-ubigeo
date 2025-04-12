@@ -7,7 +7,7 @@ Laravel Ubigeo is a package that provides a simple way to manage and use Peruvia
 Install the package via Composer:
 
 ```bash
-composer require your-vendor/laravel-ubigeo
+composer require holacliente/laravel-ubigeo
 ```
 
 ## Configuration
