@@ -3,7 +3,9 @@
 namespace Holacliente\LaravelUbigeo\Console\Commands;
 
 use Illuminate\Console\Command;
-use Holacliente\LaravelUbigeo\Models\Ubigeo; // Si tienes un modelo
+use Holacliente\LaravelUbigeo\Models\Ubigeo\Departamento;
+use Holacliente\LaravelUbigeo\Models\Ubigeo\Provincia;
+use Holacliente\LaravelUbigeo\Models\Ubigeo\Distrito;
 
 
 class UbigeoImportCommand extends Command
