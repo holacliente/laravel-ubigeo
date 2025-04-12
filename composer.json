@@ -1,12 +1,21 @@
 {
     "name": "holacliente/laravel-ubigeo",
     "type": "library",
+    "version": "v3.0.0-beta",
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "Holacliente\\LaravelUbigeo\\": "src/"
         }
     },
+    "authors": [
+        {
+            "name": "Luis Macayo",
+            "email": "luismacayo@gmail.com",
+            "homepage": "https://www.luismacayo.blogspot.com",
+            "role": "Developer"
+        }
+    ],
     "extra": {
         "laravel": {
             "providers": [
