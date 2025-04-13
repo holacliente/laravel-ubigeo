@@ -9,7 +9,7 @@
  */
 
 /* `ubigeo_peru_inei_2016`.`ubigeo_peru_districts` */
-$ubigeo_peru_districts = array(
+return array(
   array('id' => '010101','name' => 'Chachapoyas','province_id' => '0101','department_id' => '01'),
   array('id' => '010102','name' => 'Asunción','province_id' => '0101','department_id' => '01'),
   array('id' => '010103','name' => 'Balsas','province_id' => '0101','department_id' => '01'),

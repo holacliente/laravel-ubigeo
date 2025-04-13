@@ -9,7 +9,7 @@
  */
 
 /* `ubigeo_peru_inei_2016`.`ubigeo_peru_departments` */
-$ubigeo_peru_departments = array(
+return array(
   array('id' => '01','name' => 'Amazonas'),
   array('id' => '02','name' => 'Áncash'),
   array('id' => '03','name' => 'Apurímac'),

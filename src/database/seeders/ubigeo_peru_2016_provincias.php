@@ -9,7 +9,7 @@
  */
 
 /* `ubigeo_peru_inei_2016`.`ubigeo_peru_provinces` */
-$ubigeo_peru_provinces = array(
+return array(
   array('id' => '0101','name' => 'Chachapoyas','department_id' => '01'),
   array('id' => '0102','name' => 'Bagua','department_id' => '01'),
   array('id' => '0103','name' => 'Bongará','department_id' => '01'),
