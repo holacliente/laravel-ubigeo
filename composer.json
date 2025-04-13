@@ -19,9 +19,14 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Holacliente\\LaravelUbigeo\\Providers\\MiPluginServiceProvider"
+                "Holacliente\\LaravelUbigeo\\Providers\\LaravelUbigeoServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan vendor:publish --tag=laravel-ubigeo-models --force"
+        ]
     },
     "require": {
         "php": "^7.0",
