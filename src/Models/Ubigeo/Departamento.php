@@ -24,13 +24,8 @@ class Departamento extends Model
     // Indicates if the model should be timestamped
     public $timestamps = false;
 
-    /**
-     * Relationships
-     */
-
-    // Example: A departamento has many provincias
-    // public function provincias()
-    // {
-    //     return $this->hasMany(Provincia::class, 'departamento_id');
-    // }
+    public function provincias()
+    {
+        return $this->hasMany(Provincia::class, 'departamento_id');
+    }
 }
