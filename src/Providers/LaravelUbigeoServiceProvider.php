@@ -58,15 +58,9 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
     protected function runPostInstallActions()
     {
         Artisan::call('migrate', ['--force' => true]);
-        // Ejecutar migraciones
-        // if ($this->confirm('¿Ejecutar migraciones? [y|N]')) {
-        //     Artisan::call('migrate', ['--force' => true]);
-        // }
-
-        // // Mostrar feedback
-        // $this->info('¡Plugin instalado correctamente!');
-        // $this->info('Modelos copiados en: app/Models/MiPlugin');
-        // $this->info('Migraciones ejecutadas: ' . Artisan::output());
+        Artisan::call('db:seed', ['--class' => "DepartamentoSeeder"]);
+        Artisan::call('db:seed', ['--class' => "ProvinciaSeeder"]);
+        Artisan::call('db:seed', ['--class' => "DistritoSeeder"]);
     }
 
     public function register()
