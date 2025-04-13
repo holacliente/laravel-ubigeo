@@ -20,7 +20,8 @@ class Distrito extends Model
         'id',
         'descripcion',
         'cod_ubigeo',
-        'id_provincia_distrito',
+        'provincia_id',
+        'distrito_id',
     ];
 
     // Disable timestamps if not needed
@@ -31,6 +32,6 @@ class Distrito extends Model
      */
     public function provincia()
     {
-        return $this->belongsTo(Provincia::class, 'provincia_id');
+        return $this->belongsTo(Provincia::class, 'id', 'provincia_id');
     }
 }
