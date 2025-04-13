@@ -42,13 +42,13 @@ You can use the provided models or helper functions to retrieve ubigeo data:
 use App\Models\Ubigeo;
 
 // Get all departments
-$departments = Ubigeo::departments();
+$departments = Ubigeo::departamentos();
 
 // Get provinces by department
-$provinces = Ubigeo::provinces('Lima');
+$provinces = Ubigeo::provincias('Lima');
 
 // Get districts by province
-$districts = Ubigeo::districts('Lima', 'Lima');
+$districts = Ubigeo::distritos('Lima', 'Lima');
 ```
 
 ## Testing
