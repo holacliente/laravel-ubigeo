@@ -9,7 +9,7 @@ class DistritoSeeder extends Seeder
 {
     public function run()
     {
-        $distritos = include __DIR__ . '/../data/ubigeo_peru_2016_distritos.php';
+        $distritos = include __DIR__ . '/ubigeo_peru_2016_distritos.php';
         foreach ($distritos as $distrito) {
             Distrito::create([
                 'descripcion' => $distrito['name'],

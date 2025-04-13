@@ -9,7 +9,7 @@ class DepartmentoSeeder extends Seeder
 {
     public function run()
     {
-        $departamentos = include __DIR__ . '/../data/ubigeo_peru_2016_departamentos.php';
+        $departamentos = include __DIR__ . '/ubigeo_peru_2016_departamentos.php';
 
         foreach ($departamentos as $departamento) {
             Departamento::create($departamento);

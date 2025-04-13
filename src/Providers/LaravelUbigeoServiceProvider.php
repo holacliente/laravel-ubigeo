@@ -24,6 +24,10 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../../src/database/migrations');
 
+        $this->publishes([
+            __DIR__.'/../../src/database' => '/database/seeders',
+        ], 'laravel-ubigeo-seeders');
+
         $this->handlePostInstall();
 
         $this->handlePostPublish();
