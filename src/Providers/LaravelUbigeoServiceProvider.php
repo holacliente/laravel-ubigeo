@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelUbigeo\Providers;
+namespace Holacliente\LaravelUbigeo\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
