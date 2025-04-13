@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Distrito extends Model
 {
     // Table associated with the model
-    protected $table = 'distritos';
+    protected $table = 'ubigeo_distritos';
 
     // Primary key of the table
     protected $primaryKey = 'id';

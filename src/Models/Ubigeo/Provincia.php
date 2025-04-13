@@ -11,7 +11,7 @@ class Provincia extends Model
      *
      * @var string
      */
-    protected $table = 'provincias';
+    protected $table = 'ubigeo_provincias';
 
     /**
      * The attributes that are mass assignable.
