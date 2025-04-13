@@ -28,4 +28,9 @@ class Departamento extends Model
     {
         return $this->hasMany(Provincia::class, 'departamento_id');
     }
+
+    public function provincia(string $name)
+    {
+        return $this->provincias()->where('name', $name)->first();
+    }
 }
