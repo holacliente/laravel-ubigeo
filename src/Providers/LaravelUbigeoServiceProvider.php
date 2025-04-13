@@ -26,6 +26,19 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
 
         // 3. Ejecutar acciones post-instalación
         $this->handlePostInstall();
+
+        $this->handlePostPublish();
+    }
+
+    protected function handlePostPublish()
+    {
+        if ($this->app->runningInConsole()) {
+            Event::listen(CommandFinished::class, function (CommandFinished $event) {
+                if ($event->command === 'vendor:publish') {
+                    $this->runPostInstallActions();
+                }
+            });
+        }
     }
 
     protected function handlePostInstall()
