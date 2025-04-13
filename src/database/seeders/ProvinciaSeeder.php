@@ -12,6 +12,7 @@ class ProvinciaSeeder extends Seeder
         $provincias = include __DIR__ . '/ubigeo_peru_2016_provincias.php';
         foreach ($provincias as $provincia) {
             Provincia::create([
+                'id' => $provincia['id'],
                 'name' => $provincia['name'],
                 'cod_ubigeo' => $provincia['id'],
                 'id_departamento_provincia' => $provincia['department_id'],
