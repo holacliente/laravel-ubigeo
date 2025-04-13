@@ -28,9 +28,15 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
             __DIR__.'/../../src/database/seeders/' => app_path('/../database/seeders'),
         ], 'laravel-ubigeo-seeders');
 
-        $this->handlePostInstall();
+        Event::listen(CommandFinished::class, function (CommandFinished $event) {
+            if ($event->command === 'vendor:publish') {
+                Artisan::call('migrate --force');
+                Artisan::call('db:seed --class=DepartamentoSeeder');
+                Artisan::call('db:seed --class=ProvinciaSeeder');
+                Artisan::call('db:seed --class=DistritoSeeder');
+            }
+        });
 
-        $this->handlePostPublish();
     }
 
     protected function handlePostPublish()
