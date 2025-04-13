@@ -22,7 +22,7 @@ class Provincia extends Model
         'id',
         'name',
         'cod_ubigeo',
-        'id_departamento_provincia',
+        'departamento_id',
     ];
 
     // Disable timestamps if not needed
