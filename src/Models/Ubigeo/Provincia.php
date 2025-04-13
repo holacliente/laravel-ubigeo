@@ -24,6 +24,9 @@ class Provincia extends Model
         'id_departamento_provincia',
     ];
 
+    // Disable timestamps if not needed
+    public $timestamps = false;
+
     /**
      * Get the departamento that owns the provincia.
      */
