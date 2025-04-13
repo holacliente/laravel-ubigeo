@@ -7,7 +7,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 
-class CreateUbigeoProvinciasTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -39,4 +39,4 @@ class CreateUbigeoProvinciasTable extends Migration
     {
         Schema::dropIfExists('ubigeo_provincias');
     }
-}
+};
