@@ -15,20 +15,24 @@ composer require holacliente/laravel-ubigeo
 Publish the configuration file:
 
 ```bash
-php artisan vendor:publish --tag=laravel-ubigeo-config
+php artisan vendor:publish --tag=laravel-ubigeo-models --force
+php artisan vendor:publish --tag=laravel-ubigeo-seeders --force
 ```
 
-This will create a `config/ubigeo.php` file where you can customize the package settings.
+Migrate the data and seeders
+
+```bash
+php artisan migrate
+php artisan db:seed --class=DepartamentoSeeder
+php artisan db:seed --class=ProvinciaSeeder
+php artisan db:seed --class=DistritoSeeder
+
+```
+
 
 ## Usage
 
-### Import Ubigeo Data
 
-Run the following command to import ubigeo data into your database:
-
-```bash
-php artisan ubigeo:import
-```
 
 ### Retrieve Ubigeo Information
 
