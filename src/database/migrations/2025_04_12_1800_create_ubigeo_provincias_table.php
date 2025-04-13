@@ -17,16 +17,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ubigeo_provincias', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('departamento_id');
-            $table->string('nombre', 100);
-            $table->string('codigo', 10)->unique();
-            $table->timestamps();
+            $table->integer('id_provinciau')->primary();
+            $table->string('descripcion', 50);
+            $table->string('cod_ubigeo', 6);
+            $table->integer('id_departamento_provincia');
+            $table->integer('id_pais_provincia');
 
-            $table->foreign('departamento_id')
-                ->references('id')
-                ->on('ubigeo_departamentos')
-                ->onDelete('cascade');
+            // Índice para 'id_departamento_provincia'
+            $table->index('id_departamento_provincia', 'Id_Departamento_Provincia_idx');
         });
     }
 

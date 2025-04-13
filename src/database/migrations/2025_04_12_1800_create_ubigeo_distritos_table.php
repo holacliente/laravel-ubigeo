@@ -17,15 +17,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ubigeo_distritos', function (Blueprint $table) {
-            $table->id();
-            $table->string('codigo', 6)->unique();
-            $table->string('nombre', 100);
-            $table->string('provincia_codigo', 4);
-            $table->string('departamento_codigo', 2);
-            $table->timestamps();
+            $table->integer('id_distritou')->primary();
+            $table->string('descripcion', 50);
+            $table->string('cod_ubigeo', 6);
+            $table->integer('id_provincia_distrito');
 
-            $table->foreign('provincia_codigo')->references('codigo')->on('ubigeo_provincias')->onDelete('cascade');
-            $table->foreign('departamento_codigo')->references('codigo')->on('ubigeo_departamentos')->onDelete('cascade');
+            // Índice para 'id_provincia_distrito'
+            $table->index('id_provincia_distrito', 'Id_Provincia_Distrito_idx');
         });
     }
 
