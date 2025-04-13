@@ -13,24 +13,24 @@ class Departamento extends Model
     protected $primaryKey = 'id';
 
     // Indicates if the IDs are auto-incrementing
-    public $incrementing = true;
+    public $incrementing = false;
 
     // The attributes that are mass assignable
     protected $fillable = [
-        'nombre',
-        'codigo',
+        'id',
+        'name',
     ];
 
     // Indicates if the model should be timestamped
-    public $timestamps = true;
+    public $timestamps = false;
 
     /**
      * Relationships
      */
 
     // Example: A departamento has many provincias
-    public function provincias()
-    {
-        return $this->hasMany(Provincia::class, 'departamento_id');
-    }
+    // public function provincias()
+    // {
+    //     return $this->hasMany(Provincia::class, 'departamento_id');
+    // }
 }

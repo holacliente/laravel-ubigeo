@@ -13,12 +13,14 @@ class Distrito extends Model
     protected $primaryKey = 'id';
 
     // Indicates if the IDs are auto-incrementing
-    public $incrementing = true;
+    public $incrementing = false;
 
     // The attributes that are mass assignable
     protected $fillable = [
-        'nombre',
-        'provincia_id',
+        'id',
+        'descripcion',
+        'cod_ubigeo',
+        'id_provincia_distrito',
     ];
 
     // Disable timestamps if not needed

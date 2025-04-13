@@ -7,7 +7,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 
-class CreateUbigeoProvinciasTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -17,16 +17,10 @@ class CreateUbigeoProvinciasTable extends Migration
     public function up()
     {
         Schema::create('ubigeo_provincias', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('departamento_id');
-            $table->string('nombre', 100);
-            $table->string('codigo', 10)->unique();
-            $table->timestamps();
-
-            $table->foreign('departamento_id')
-                ->references('id')
-                ->on('ubigeo_departamentos')
-                ->onDelete('cascade');
+            $table->integer('id')->primary();
+            $table->string('name', 50);
+            $table->string('cod_ubigeo', 6);
+            $table->integer('id_departamento_provincia');
         });
     }
 
@@ -39,4 +33,4 @@ class CreateUbigeoProvinciasTable extends Migration
     {
         Schema::dropIfExists('ubigeo_provincias');
     }
-}
+};

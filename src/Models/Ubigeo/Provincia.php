@@ -19,8 +19,9 @@ class Provincia extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre',
-        'departamento_id',
+        'name',
+        'cod_ubigeo',
+        'id_departamento_provincia',
     ];
 
     /**

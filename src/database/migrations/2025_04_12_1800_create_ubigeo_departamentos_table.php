@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUbigeoDepartamentosTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -16,10 +16,8 @@ class CreateUbigeoDepartamentosTable extends Migration
     public function up()
     {
         Schema::create('ubigeo_departamentos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombre', 100)->unique();
-            $table->string('codigo', 10)->unique();
-            $table->timestamps();
+            $table->integer('id')->primary();
+            $table->string('name', 80);
         });
     }
 
@@ -32,4 +30,4 @@ class CreateUbigeoDepartamentosTable extends Migration
     {
         Schema::dropIfExists('ubigeo_departamentos');
     }
-}
+};
