@@ -36,7 +36,7 @@ class Distrito extends Model
     }
 
     /**
-     * Scope a query to only include provincias with a specific cod_ubigeo.
+     * Scope a query to only include distritos with a specific cod_ubigeo.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
      * @param string $codUbigeo
