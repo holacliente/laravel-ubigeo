@@ -57,10 +57,10 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
 
     protected function runPostInstallActions()
     {
-        Artisan::call('migrate', ['--force' => true]);
-        Artisan::call('db:seed', ['--class' => "DepartamentoSeeder"]);
-        Artisan::call('db:seed', ['--class' => "ProvinciaSeeder"]);
-        Artisan::call('db:seed', ['--class' => "DistritoSeeder"]);
+        // Artisan::call('migrate', ['--force' => true]);
+        // Artisan::call('db:seed', ['--class' => "DepartamentoSeeder"]);
+        // Artisan::call('db:seed', ['--class' => "ProvinciaSeeder"]);
+        // Artisan::call('db:seed', ['--class' => "DistritoSeeder"]);
     }
 
     public function register()
