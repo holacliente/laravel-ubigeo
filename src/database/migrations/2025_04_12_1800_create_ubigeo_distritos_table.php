@@ -20,10 +20,8 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->string('descripcion', 50);
             $table->string('cod_ubigeo', 6);
-            $table->integer('id_provincia_distrito');
-
-            // Índice para 'id_provincia_distrito'
-            $table->index('id_provincia_distrito', 'Id_Provincia_Distrito_idx');
+            $table->integer('provincia_id');
+            $table->integer('distrito_id');
         });
     }
 

@@ -15,7 +15,8 @@ class DistritoSeeder extends Seeder
                 'id' => $distrito['id'],
                 'descripcion' => $distrito['name'],
                 'cod_ubigeo' => $distrito['id'],
-                'id_provincia_distrito' => $distrito['department_id'],
+                'provincia_id' => $distrito['province_id'],
+                'distrito_id' => $distrito['department_id'],
             ]);
         }
     }
