@@ -1,6 +1,6 @@
 <?php
 
-namespace Holacliente\LaravelUbigeo\Models\Ubigeo;
+namespace App\Models\Ubigeo;
 
 use Illuminate\Database\Eloquent\Model;
 
