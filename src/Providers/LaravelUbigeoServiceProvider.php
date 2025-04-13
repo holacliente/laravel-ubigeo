@@ -22,7 +22,7 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
             __DIR__.'/../../src/Models/Ubigeo/Distrito.php' => app_path('Models/Ubigeo/Distrito.php'),
         ], 'laravel-ubigeo-models');
 
-        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../../src/database/migrations');
 
         // 3. Ejecutar acciones post-instalación
         $this->handlePostInstall();
@@ -35,7 +35,7 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             Event::listen(CommandFinished::class, function (CommandFinished $event) {
                 if ($event->command === 'vendor:publish') {
-                    $this->runPostInstallActions();
+                    Artisan::call('migrate', ['--force' => true]);
                 }
             });
         }
