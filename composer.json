@@ -33,5 +33,11 @@
         "php": "^7.0",
         "laravel/framework": "^8.75"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ernestorivero/Ubigeo-Peru.git"
+        }
+    ],
     "minimum-stability": "dev"
 }
