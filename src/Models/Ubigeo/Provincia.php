@@ -43,4 +43,9 @@ class Provincia extends Model
     {
         return $this->hasMany(Distrito::class, 'provincia_id', 'id');
     }
+
+    public function distrito(string $name)
+    {
+        return $this->distritos()->where('descripcion', $name)->first();
+    }
 }
