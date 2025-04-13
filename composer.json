@@ -1,7 +1,7 @@
 {
     "name": "holacliente/laravel-ubigeo",
     "type": "library",
-    "version": "v5.0.1-beta",
+    "version": "v5.0.2-beta",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -26,8 +26,8 @@
     "scripts": {
         "post-autoload-dump": [
             "@php artisan vendor:publish --tag=laravel-ubigeo-models --force",
+            "@php artisan vendor:publish --tag=laravel-ubigeo-seeders --force",
             "@php artisan migrate --force",
-            "@php artisan vendor:publish --tag=laravel-ubigeo-seeders",
             "@php artisan db:seed --class=DepartamentoSeeder",
             "@php artisan db:seed --class=ProvinciaSeeder",
             "@php artisan db:seed --class=DistritoSeeder"
