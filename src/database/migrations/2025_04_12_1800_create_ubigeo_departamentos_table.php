@@ -16,10 +16,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ubigeo_departamentos', function (Blueprint $table) {
-            $table->integer('id_departamentou')->primary();
-            $table->string('descripcion', 80);
-            $table->string('code', 6);
-            $table->string('fk_country', 6)->nullable();
+            $table->integer('id')->primary();
+            $table->string('name', 80);
         });
     }
 
