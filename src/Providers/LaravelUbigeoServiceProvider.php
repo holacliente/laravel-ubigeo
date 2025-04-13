@@ -16,12 +16,12 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Publish the model to the application's app/Models directory
         $this->publishes([
             __DIR__.'/../../src/Models/Ubigeo/Departamento.php' => app_path('Models/Ubigeo/Departamento.php'),
+            __DIR__.'/../../src/Models/Ubigeo/Provincia.php' => app_path('Models/Ubigeo/Provincia.php'),
+            __DIR__.'/../../src/Models/Ubigeo/Distrito.php' => app_path('Models/Ubigeo/Distrito.php'),
         ], 'laravel-ubigeo-models');
 
-        // 2. Cargar migraciones automáticamente
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
 
         // 3. Ejecutar acciones post-instalación
