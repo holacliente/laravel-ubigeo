@@ -25,7 +25,8 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "@php artisan vendor:publish --tag=laravel-ubigeo-models --force"
+            "@php artisan vendor:publish --tag=laravel-ubigeo-models --force",
+            "@php artisan migrate --force"
         ]
     },
     "require": {
