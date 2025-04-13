@@ -34,4 +34,16 @@ class Distrito extends Model
     {
         return $this->belongsTo(Provincia::class, 'id', 'provincia_id');
     }
+
+    /**
+     * Scope a query to only include provincias with a specific cod_ubigeo.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param string $codUbigeo
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUbigeo($query, string $codUbigeo)
+    {
+        return $query->where('cod_ubigeo', $codUbigeo);
+    }
 }
