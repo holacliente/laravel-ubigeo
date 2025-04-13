@@ -42,7 +42,9 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
     protected function runPostInstallActions()
     {
         // Ejecutar migraciones
-        Artisan::call('migrate', ['--force' => true]);
+        if ($this->confirm('¿Ejecutar migraciones? [y|N]')) {
+            Artisan::call('migrate', ['--force' => true]);
+        }
 
         // Mostrar feedback
         $this->info('¡Plugin instalado correctamente!');
