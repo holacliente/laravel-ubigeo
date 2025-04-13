@@ -24,7 +24,6 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../../src/database/migrations');
 
-        // 3. Ejecutar acciones post-instalación
         $this->handlePostInstall();
 
         $this->handlePostPublish();
