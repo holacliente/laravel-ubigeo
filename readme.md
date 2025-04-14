@@ -17,7 +17,7 @@ composer require holacliente/laravel-ubigeo
 You can use the provided models or helper functions to retrieve ubigeo data:
 
 ```php
-use App\Models\Ubigeo;
+use Holacliente\LaravelUbigeo\Ubigeo;
 
 // Get all departments
 $departments = Ubigeo::departamentos();
