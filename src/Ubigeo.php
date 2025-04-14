@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Models;
+namespace Holacliente\LaravelUbigeo;
 
-use App\Models\Ubigeo\Departamento;
-use App\Models\Ubigeo\Provincia;
-use App\Models\Ubigeo\Distrito;
+use Holacliente\LaravelUbigeo\Ubigeo\Departamento;
+use Holacliente\LaravelUbigeo\Ubigeo\Provincia;
+use Holacliente\LaravelUbigeo\Ubigeo\Distrito;
 
 final class Ubigeo
 {
@@ -24,14 +24,15 @@ final class Ubigeo
         return Distrito::all();
     }
 
+
     public function getDepartamento($codigo): string
     {
         if($codigo === null) {
             return "---";
         }
         foreach (self::departamentos() as $value) {
-            if($value->id == $codigo) {
-            return $value->name;
+            if($value['id'] == $codigo) {
+                return $value['name'];
             }
         }
         return '---';
@@ -43,8 +44,8 @@ final class Ubigeo
             return "---";
         }
         foreach (self::distritos() as $value) {
-            if($value->id == $codigo) {
-            return $value->name;
+            if($value['id'] == $codigo) {
+                return $value['name'];
             }
         }
         return '---';
@@ -56,8 +57,8 @@ final class Ubigeo
             return "---";
         }
         foreach (self::provincias() as $value) {
-            if($value->id == $codigo) {
-            return $value->name;
+            if($value['id'] == $codigo) {
+                return $value['name'];
             }
         }
         return '---';
