@@ -15,6 +15,8 @@ class Departamento extends Model
     // Indicates if the IDs are auto-incrementing
     public $incrementing = false;
 
+    protected $keyType = 'string';
+
     // The attributes that are mass assignable
     protected $fillable = [
         'id',

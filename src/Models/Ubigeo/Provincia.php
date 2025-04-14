@@ -13,6 +13,14 @@ class Provincia extends Model
      */
     protected $table = 'ubigeo_provincias';
 
+    // Primary key of the table
+    protected $primaryKey = 'id';
+
+    // Indicates if the IDs are auto-incrementing
+    public $incrementing = false;
+
+    protected $keyType = 'string';
+
     /**
      * The attributes that are mass assignable.
      *
