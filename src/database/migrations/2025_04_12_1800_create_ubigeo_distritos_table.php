@@ -17,11 +17,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ubigeo_distritos', function (Blueprint $table) {
-            $table->integer('id')->primary();
+            $table->string('id', 6)->primary();
             $table->string('descripcion', 50);
             $table->string('cod_ubigeo', 6);
-            $table->integer('provincia_id');
-            $table->integer('distrito_id');
+            $table->string('provincia_id', 6);
+            $table->string('distrito_id', 6);
         });
     }
 
