@@ -30,7 +30,11 @@ final class Ubigeo
         if($result === null) {
             throw new Exception("Departamento no encontrado");
         }
-        return $result->provincias()->distritos($provincia);
+        $provincia = $result->provincias()->where('name', 'LIKE', "%{$provincia}%")->first();
+        if($provincia === null) {
+            throw new Exception("Distrito no encontrado");
+        }
+        return $provincia->distritos;
 
     }
 }
