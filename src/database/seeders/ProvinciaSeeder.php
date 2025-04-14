@@ -15,7 +15,7 @@ class ProvinciaSeeder extends Seeder
                 'id' => $provincia['id'],
                 'name' => $provincia['name'],
                 'cod_ubigeo' => $provincia['id'],
-                'id_departamento_provincia' => $provincia['department_id'],
+                'departamento_id' => $provincia['department_id'],
             ]);
         }
     }

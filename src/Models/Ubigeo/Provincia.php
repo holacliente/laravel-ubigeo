@@ -22,7 +22,7 @@ class Provincia extends Model
         'id',
         'name',
         'cod_ubigeo',
-        'id_departamento_provincia',
+        'departamento_id',
     ];
 
     // Disable timestamps if not needed
@@ -41,6 +41,23 @@ class Provincia extends Model
      */
     public function distritos()
     {
-        return $this->hasMany(Distrito::class);
+        return $this->hasMany(Distrito::class, 'provincia_id', 'id');
+    }
+
+    public function distrito(string $name)
+    {
+        return $this->distritos()->where('descripcion', $name)->first();
+    }
+
+    /**
+     * Scope a query to only include provincias with a specific cod_ubigeo.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param string $codUbigeo
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeUbigeo($query, string $codUbigeo)
+    {
+        return $query->where('cod_ubigeo', $codUbigeo);
     }
 }

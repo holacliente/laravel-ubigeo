@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('id')->primary();
             $table->string('name', 50);
             $table->string('cod_ubigeo', 6);
-            $table->integer('id_departamento_provincia');
+            $table->integer('departamento_id');
         });
     }
 
