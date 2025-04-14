@@ -5,7 +5,6 @@ namespace App\Models;
 use App\Models\Ubigeo\Departamento;
 use App\Models\Ubigeo\Provincia;
 use App\Models\Ubigeo\Distrito;
-use Exception;
 
 final class Ubigeo
 {
@@ -15,22 +14,52 @@ final class Ubigeo
         return Departamento::all();
     }
 
-    public static function provincias(string $departamento)
+    public static function provincias()
     {
-        $result = Departamento::where('name', 'LIKE', "%{$departamento}%")->first();
-        if($result === null) {
-            throw new Exception("Departamento no encontrado");
-        }
-        return $result->provincias;
+        return Provincia::all();
     }
 
-    public function distritos(string $departamento, string $provincia)
+    public static function distritos()
     {
-        $result = Departamento::where('name', 'LIKE', "%{$departamento}%")->first();
-        if($result === null) {
-            throw new Exception("Departamento no encontrado");
-        }
-        return $result->provincias()->distritos($provincia);
+        return Distrito::all();
+    }
 
+    public function getDepartamento($codigo): string
+    {
+        if($codigo === null) {
+            return "---";
+        }
+        foreach (self::departamentos() as $value) {
+            if($value->id == $codigo) {
+            return $value->name;
+            }
+        }
+        return '---';
+    }
+
+    public function getDistrito($codigo): string
+    {
+        if($codigo === null) {
+            return "---";
+        }
+        foreach (self::distritos() as $value) {
+            if($value->id == $codigo) {
+            return $value->name;
+            }
+        }
+        return '---';
+    }
+
+    public function getProvincia($codigo): string
+    {
+        if($codigo === null) {
+            return "---";
+        }
+        foreach (self::provincias() as $value) {
+            if($value->id == $codigo) {
+            return $value->name;
+            }
+        }
+        return '---';
     }
 }

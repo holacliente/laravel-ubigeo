@@ -1,7 +1,7 @@
 {
     "name": "holacliente/laravel-ubigeo",
     "type": "library",
-    "version": "v5.2.0",
+    "version": "v5.4.0",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -11,8 +11,8 @@
     "authors": [
         {
             "name": "Luis Macayo",
-            "email": "luismacayo@gmail.com",
-            "homepage": "https://www.luismacayo.blogspot.com",
+            "email": "lmacayo@holacliente.com",
+            "homepage": "https://www.holacliente.com",
             "role": "Developer"
         }
     ],
