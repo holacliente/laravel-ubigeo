@@ -10,29 +10,7 @@ Install the package via Composer:
 composer require holacliente/laravel-ubigeo
 ```
 
-## Configuration
-
-Publish the configuration file:
-
-```bash
-php artisan vendor:publish --tag=laravel-ubigeo-models --force
-php artisan vendor:publish --tag=laravel-ubigeo-seeders --force
-```
-
-Migrate the data and seeders
-
-```bash
-php artisan migrate
-php artisan db:seed --class=DepartamentoSeeder
-php artisan db:seed --class=ProvinciaSeeder
-php artisan db:seed --class=DistritoSeeder
-
-```
-
-
 ## Usage
-
-
 
 ### Retrieve Ubigeo Information
 
@@ -45,10 +23,10 @@ use App\Models\Ubigeo;
 $departments = Ubigeo::departamentos();
 
 // Get provinces by department
-$provinces = Ubigeo::provincias('Lima');
+$provinces = Ubigeo::provincias();
 
 // Get districts by province
-$districts = Ubigeo::distritos('Lima', 'Lima');
+$districts = Ubigeo::distritos();
 ```
 
 ## Testing
