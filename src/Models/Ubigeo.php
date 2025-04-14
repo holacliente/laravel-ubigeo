@@ -17,7 +17,7 @@ final class Ubigeo
 
     public static function provincias(string $departamento)
     {
-        $result = Departamento::where(['name', 'LIKE', "%{$departamento}%"])->first();
+        $result = Departamento::where('name', 'LIKE', "%{$departamento}%")->first();
         if($result === null) {
             throw new Exception("Departamento no encontrado");
         }
@@ -26,7 +26,7 @@ final class Ubigeo
 
     public function distritos(string $departamento, string $provincia)
     {
-        $result = Departamento::where(['name', 'LIKE', "%{$departamento}%"])->first();
+        $result = Departamento::where('name', 'LIKE', "%{$departamento}%")->first();
         if($result === null) {
             throw new Exception("Departamento no encontrado");
         }
