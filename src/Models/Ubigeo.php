@@ -31,8 +31,8 @@ final class Ubigeo
             return "---";
         }
         foreach (self::departamentos() as $value) {
-            if($value->id == $codigo) {
-            return $value->name;
+            if($value['id'] == $codigo) {
+                return $value['name'];
             }
         }
         return '---';
@@ -44,8 +44,8 @@ final class Ubigeo
             return "---";
         }
         foreach (self::distritos() as $value) {
-            if($value->id == $codigo) {
-            return $value->name;
+            if($value['id'] == $codigo) {
+                return $value['name'];
             }
         }
         return '---';
@@ -57,8 +57,8 @@ final class Ubigeo
             return "---";
         }
         foreach (self::provincias() as $value) {
-            if($value->id == $codigo) {
-            return $value->name;
+            if($value['id'] == $codigo) {
+                return $value['name'];
             }
         }
         return '---';
