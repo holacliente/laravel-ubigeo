@@ -1,10 +1,10 @@
 <?php
 
-namespace Holacliente\LaravelUbigeo\Models;
+namespace Holacliente\LaravelUbigeo;
 
-use Holacliente\LaravelUbigeo\Models\Ubigeo\Departamento;
-use Holacliente\LaravelUbigeo\Models\Ubigeo\Provincia;
-use Holacliente\LaravelUbigeo\Models\Ubigeo\Distrito;
+use Holacliente\LaravelUbigeo\Ubigeo\Departamento;
+use Holacliente\LaravelUbigeo\Ubigeo\Provincia;
+use Holacliente\LaravelUbigeo\Ubigeo\Distrito;
 
 final class Ubigeo
 {

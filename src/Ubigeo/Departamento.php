@@ -1,6 +1,6 @@
 <?php
 
-namespace Holacliente\LaravelUbigeo\Models\Ubigeo;
+namespace Holacliente\LaravelUbigeo\Ubigeo;
 
 
 class Departamento
