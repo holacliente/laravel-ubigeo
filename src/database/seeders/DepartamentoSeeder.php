@@ -12,7 +12,10 @@ class DepartamentoSeeder extends Seeder
         $departamentos = include __DIR__ . '/ubigeo_peru_2016_departamentos.php';
 
         foreach ($departamentos as $departamento) {
-            Departamento::create($departamento);
+            Departamento::create([
+                'id' => $departamento['id'],
+                'name' => $departamento['name'],
+            ]);
         }
     }
 }
