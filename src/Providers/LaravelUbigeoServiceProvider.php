@@ -20,6 +20,7 @@ class LaravelUbigeoServiceProvider extends ServiceProvider
             __DIR__.'/../../src/Models/Ubigeo/Departamento.php' => app_path('Models/Ubigeo/Departamento.php'),
             __DIR__.'/../../src/Models/Ubigeo/Provincia.php' => app_path('Models/Ubigeo/Provincia.php'),
             __DIR__.'/../../src/Models/Ubigeo/Distrito.php' => app_path('Models/Ubigeo/Distrito.php'),
+            __DIR__.'/../../src/Models/Ubigeo.php' => app_path('Models/Ubigeo.php'),
         ], 'laravel-ubigeo-models');
 
         $this->loadMigrationsFrom(__DIR__.'/../../src/database/migrations');
