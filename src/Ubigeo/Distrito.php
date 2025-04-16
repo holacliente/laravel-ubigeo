@@ -1883,4 +1883,11 @@ class Distrito
             array('id' => '250401','name' => 'Purus','province_id' => '2504','department_id' => '25')
         );
     }
+
+    public static function getByProvincia($codigo_province): array
+    {
+        return array_filter(self::all(), function ($value) use ($codigo_province) {
+            return $value['province_id'] === $codigo_province;
+        });
+    }
 }

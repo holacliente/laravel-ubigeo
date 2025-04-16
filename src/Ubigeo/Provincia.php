@@ -205,4 +205,11 @@ class Provincia
             array('id' => '2504','name' => 'Purús','department_id' => '25')
         );
     }
+
+    public static function getByDpto($codigo_dpto): array
+    {
+        return array_filter(self::all(), function ($value) use ($codigo_dpto) {
+            return $value['department_id'] === $codigo_dpto;
+        });
+    }
 }
